@@ -40,6 +40,9 @@ h1 {
   width: 270px;
   margin: auto;
 }
+#explore p {
+  color: #7e7e7e;
+}
 
 .button {
   padding: 20px;
@@ -64,9 +67,36 @@ h1 {
 .functioning--elt {
   background-color: #f6f6f6;
   box-shadow: 8px 5px 15px #dddddd;
-  width: 80%;
+  width: 240px;
   padding: 18px;
   border-radius: 20px;
+  margin: auto;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+.functioning--elt__icon {
+  color: #7e7e7e;
+  display: flex;
+  font-size: 110%;
+}
+.functioning--elt__number {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 40px;
+  font-size: small;
+  font-weight: 400;
+  padding: 2.5px 6px 2px 6px;
+  position: absolute;
+  margin-left: -270px;
+}
+.functioning--elt--highlight {
+  background-color: #f5edff;
+}
+.functioning--elt--highlight__icon {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */

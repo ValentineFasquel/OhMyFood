@@ -3,6 +3,8 @@ $secondary : #ff79da;
 $tertiary : #99e2d0;
 $shadow : #dddddd;
 $background : #f6f6f6;
+$smooth : #7e7e7e;
+$primarylight : #f5edff;
 
 @mixin shadow {
     box-shadow: 8px 5px 15px $shadow;
@@ -51,6 +53,9 @@ h1 {
              width:270px;
              margin:auto;
     }
+        & p {
+            color : $smooth;
+        }
 
 }
 
@@ -77,7 +82,35 @@ h1 {
 .functioning--elt {
     background-color: $background;
     @include shadow();
-    width:80%;
+    width:240px;
     padding:18px;
     border-radius:20px;
+    margin:auto;
+    margin-top:20px;
+    font-weight: 600;
+    font-size: 90%;;
+    display:flex;
+    justify-content: space-around;
+        &__icon {
+            color: $smooth;
+            display: flex;
+            font-size: 110%;
+        }
+        &__number {
+            background-color: $primary;
+            color:white;
+            border-radius: 40px;
+            font-size:small ;
+            font-weight: 400;
+            padding:2.5px 6px 2px 6px;
+            position:absolute;
+            margin-left:-270px;
+        }
+        &--highlight {
+            background-color:$primarylight;
+                &__icon {
+                    color: $primary
+                }
+        }
 }
+
