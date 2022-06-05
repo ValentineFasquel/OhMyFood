@@ -12,6 +12,11 @@ $darkcolor : #353535;
     box-shadow: 8px 8px 15px $shadow;
 }
 
+@mixin strongershadow {
+    box-shadow: 10px 10px 15px darken($shadow, 20%);
+    transition: box-shadow 0.5s ease;
+}
+
 @mixin title {
     padding:2rem 0 15px 15px;
 }
@@ -25,6 +30,12 @@ body {
 
 ul {
     list-style-type: none;
+}
+
+a { 
+    text-decoration:none;
+    color:inherit;
+    display: inherit;   
 }
 
 header {
@@ -42,11 +53,19 @@ h1 {
 
 .location {
     background-color: #eaeaea;
-    padding:20px;
+    padding:10px;
     text-align: center;
-    color: $darkcolor;
-    font-weight:600;
     box-shadow: inset 0px 3px 3px $shadow;
+        &--form {
+            border:none;
+            height:35px;
+            background-color:#eaeaea;
+            text-align:center;
+                &::placeholder {
+                    color: $darkcolor;
+                    font-weight:600;
+                }
+        }
 }
 
 #explore {
@@ -74,6 +93,11 @@ h1 {
     font-weight:500;
     letter-spacing: 0.5px;;
     margin-top:10px;
+        &:hover {
+            @include strongershadow();
+            transform: scale(1.03);
+            transition: transform 0.2s ease;
+        }
 }
 
 #functioning {
@@ -96,7 +120,9 @@ h1 {
     font-weight: 600;
     font-size: 90%;;
     display:flex;
+    position:relative;
     justify-content: space-around;
+    z-index: 1;
         &__icon {
             color: $smooth;
             display: flex;
@@ -112,12 +138,36 @@ h1 {
             position:absolute;
             margin-left:-270px;
         }
-        &--highlight {
-            background-color:$primarylight;
-                &__icon {
-                    color: $primary
-                }
+        &:hover {
+            @include strongershadow();
+
         }
+}
+
+.functioning--elt::before {
+    background: $primarylight;
+    content: "";
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width:240px;
+    border-radius:20px;
+    margin:auto;
+    transition:all 0.4s ease-out;
+    width:0%;
+    height:100%;
+    transform: rotate (70deg) translate (-50%, -50%) ;
+}
+
+.functioning--elt:hover::before {
+    width:100%;
+
+}
+
+.functioning--elt:hover .functioning--elt__icon {
+    color:$primary;
 }
 
 #restaurants {
@@ -136,14 +186,12 @@ h1 {
         &__new {
             background-color:$tertiary;
             color: darken($tertiary,40%);
-            border-radius:3px;
-            display: block;
-            position:absolute;
-            padding:6px 10px;
-            font-size: 80%;
-            font-weight: 600;
-            //margin:15px 15px 0 255px;;
-            margin:auto;
+            display: flex;
+            padding: 0.5em 1em;
+            margin-top:0.6rem;
+            position: absolute;
+            right: 1.8rem;
+            border-radius: 3px;
         }
         &__image {
             object-fit: cover;
@@ -171,9 +219,29 @@ h1 {
             font-size:140%;
             font-weight:100;
             align-self:center;
-            justify-self:flex-start;
+                &--activated {
+                    background-image:linear-gradient(to top, $secondary, $primary);
+                    background-clip:text;
+                    color:transparent;
+                    background: -webkit-linear-gradient(to top, $secondary, $primary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 141%;
+                    position:absolute;
+                    left:85%;
+                    align-self: center;
+                    opacity: 1;
+                }
+                /*&:active {
+                    display:inline;
+                }*/
             }
+
+        &:hover {
+            @include strongershadow();
         }
+        }
+
 
 footer {
     background-color: $darkcolor;

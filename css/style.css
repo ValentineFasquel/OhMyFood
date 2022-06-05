@@ -9,6 +9,12 @@ ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inherit;
+}
+
 header {
   text-align: center;
 }
@@ -24,11 +30,19 @@ h1 {
 
 .location {
   background-color: #eaeaea;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
+  box-shadow: inset 0px 3px 3px #dddddd;
+}
+.location--form {
+  border: none;
+  height: 35px;
+  background-color: #eaeaea;
+  text-align: center;
+}
+.location--form::placeholder {
   color: #353535;
   font-weight: 600;
-  box-shadow: inset 0px 3px 3px #dddddd;
 }
 
 #explore {
@@ -56,6 +70,12 @@ h1 {
   letter-spacing: 0.5px;
   margin-top: 10px;
 }
+.button:hover {
+  box-shadow: 10px 10px 15px #aaaaaa;
+  transition: box-shadow 0.5s ease;
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
 
 #functioning {
   display: flex;
@@ -77,7 +97,9 @@ h1 {
   font-weight: 600;
   font-size: 90%;
   display: flex;
+  position: relative;
   justify-content: space-around;
+  z-index: 1;
 }
 .functioning--elt__icon {
   color: #7e7e7e;
@@ -94,10 +116,33 @@ h1 {
   position: absolute;
   margin-left: -270px;
 }
-.functioning--elt--highlight {
-  background-color: #f5edff;
+.functioning--elt:hover {
+  box-shadow: 10px 10px 15px #aaaaaa;
+  transition: box-shadow 0.5s ease;
 }
-.functioning--elt--highlight__icon {
+
+.functioning--elt::before {
+  background: #f5edff;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 240px;
+  border-radius: 20px;
+  margin: auto;
+  transition: all 0.4s ease-out;
+  width: 0%;
+  height: 100%;
+  transform: rotate 70deg translate -50%, -50%;
+}
+
+.functioning--elt:hover::before {
+  width: 100%;
+}
+
+.functioning--elt:hover .functioning--elt__icon {
   color: #9356DC;
 }
 
@@ -118,13 +163,12 @@ h1 {
 .restaurant--card__new {
   background-color: #99e2d0;
   color: #278870;
-  border-radius: 3px;
-  display: block;
+  display: flex;
+  padding: 0.5em 1em;
+  margin-top: 0.6rem;
   position: absolute;
-  padding: 6px 10px;
-  font-size: 80%;
-  font-weight: 600;
-  margin: auto;
+  right: 1.8rem;
+  border-radius: 3px;
 }
 .restaurant--card__image {
   object-fit: cover;
@@ -149,7 +193,26 @@ h1 {
   font-size: 140%;
   font-weight: 100;
   align-self: center;
-  justify-self: flex-start;
+  /*&:active {
+      display:inline;
+  }*/
+}
+.restaurant--card__like--activated {
+  background-image: linear-gradient(to top, #ff79da, #9356DC);
+  background-clip: text;
+  color: transparent;
+  background: -webkit-linear-gradient(to top, #ff79da, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 141%;
+  position: absolute;
+  left: 85%;
+  align-self: center;
+  opacity: 1;
+}
+.restaurant--card:hover {
+  box-shadow: 10px 10px 15px #aaaaaa;
+  transition: box-shadow 0.5s ease;
 }
 
 footer {
