@@ -1,0 +1,83 @@
+$primary : #9356DC;
+$secondary : #ff79da;
+$tertiary : #99e2d0;
+$shadow : #dddddd;
+$background : #f6f6f6;
+
+@mixin shadow {
+    box-shadow: 8px 5px 15px $shadow;
+}
+
+body {
+    max-width: 668px;
+    margin:auto;
+    box-sizing: border-box;
+    font-family:'roboto';
+}
+
+header {
+    text-align:center;   
+        & img {
+        margin:18px 0 10px 0;
+        }
+}
+
+
+/*h1 h2 h3 h4 h5 h6 {
+    font-family: 'shrikhand';
+}*/
+
+h1 {
+    font-size:160%;
+    letter-spacing:-1px;
+    font-weight: 700;
+}
+
+.location {
+    background-color: #eaeaea;
+    padding:20px;
+    text-align: center;
+    color: #353535;
+    font-weight:600;
+    box-shadow: inset 0px 3px 3px $shadow;
+}
+
+#explore {
+    background-color: $background;
+    text-align:center;
+    padding:45px 3rem;
+        & h1 {
+             margin:0;
+             width:270px;
+             margin:auto;
+    }
+
+}
+
+.button {
+    padding:20px;
+    border:none;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom right, $secondary, $primary);
+    @include shadow();
+    color:white;
+    font-weight:500;
+    letter-spacing: 0.5px;;
+    margin-top:10px;
+}
+
+#functioning {
+    display:flex;
+    flex-direction: column;
+    & h1 {
+        margin:2rem 0 15px 15px;
+    }
+}
+
+.functioning--elt {
+    background-color: $background;
+    @include shadow();
+    width:80%;
+    padding:18px;
+    border-radius:20px;
+}
