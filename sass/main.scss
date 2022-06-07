@@ -39,7 +39,7 @@ a {
 }
 
 header {
-    text-align:center;   
+    text-align:center; 
         & img {
         margin:18px 0 10px 0;
         }
@@ -219,22 +219,28 @@ h1 {
             font-size:140%;
             font-weight:100;
             align-self:center;
+            position:absolute;
+            left:80%;
+            z-index: 0;
                 &--activated {
                     background-image:linear-gradient(to top, $secondary, $primary);
                     background-clip:text;
-                    color:transparent;
-                    background: -webkit-linear-gradient(to top, $secondary, $primary);
                     -webkit-background-clip: text;
+                    color:transparent;     
                     -webkit-text-fill-color: transparent;
-                    font-size: 141%;
+                    font-size: 110%;
                     position:absolute;
-                    left:85%;
+                    left:-2%;
                     align-self: center;
-                    opacity: 1;
+                    opacity: 0;
+                    /*transform: scale(0);*/
+                        &:hover {
+                            opacity:1;
+                            transform: scale(1.1);
+                            transition: all 0.4s ease;
+                        }
                 }
-                /*&:active {
-                    display:inline;
-                }*/
+            
             }
 
         &:hover {
@@ -247,7 +253,7 @@ footer {
     background-color: $darkcolor;
     color:white;
     padding-bottom:20px;
-        & h2 {
+        & h4 {
             font-family: shrikhand;
             font-weight:50;
             font-size:120%;
@@ -260,3 +266,36 @@ footer {
         & .fas {padding-right:10px;}
 }
 
+/* PAGE MENU */
+
+nav {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right:22%;
+}
+
+.fa-arrow-left {
+    font-size:130%;
+    color:$darkcolor;
+
+}
+
+.menu {
+    background-color: $background;
+    display:flex;
+    border-radius:30px 30px 0 0;
+    margin-top: -20%;
+    position:relative;
+    width:100%;
+    z-index:2;
+        & h1 {
+            font-family:shrikhand;
+            font-weight:200;
+            text-align:center;
+        }
+    &--image {
+     width:100%;
+     z-index: 1;
+    }
+}

@@ -193,22 +193,27 @@ h1 {
   font-size: 140%;
   font-weight: 100;
   align-self: center;
-  /*&:active {
-      display:inline;
-  }*/
+  position: absolute;
+  left: 80%;
+  z-index: 0;
 }
 .restaurant--card__like--activated {
   background-image: linear-gradient(to top, #ff79da, #9356DC);
   background-clip: text;
-  color: transparent;
-  background: -webkit-linear-gradient(to top, #ff79da, #9356DC);
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
-  font-size: 141%;
+  font-size: 110%;
   position: absolute;
-  left: 85%;
+  left: -2%;
   align-self: center;
+  opacity: 0;
+  /*transform: scale(0);*/
+}
+.restaurant--card__like--activated:hover {
   opacity: 1;
+  transform: scale(1.1);
+  transition: all 0.4s ease;
 }
 .restaurant--card:hover {
   box-shadow: 10px 10px 15px #aaaaaa;
@@ -220,7 +225,7 @@ footer {
   color: white;
   padding-bottom: 20px;
 }
-footer h2 {
+footer h4 {
   font-family: shrikhand;
   font-weight: 50;
   font-size: 120%;
@@ -232,6 +237,38 @@ footer li {
 }
 footer .fas {
   padding-right: 10px;
+}
+
+/* PAGE MENU */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 22%;
+}
+
+.fa-arrow-left {
+  font-size: 130%;
+  color: #353535;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  display: flex;
+  border-radius: 30px 30px 0 0;
+  margin-top: -20%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.menu h1 {
+  font-family: shrikhand;
+  font-weight: 200;
+  text-align: center;
+}
+.menu--image {
+  width: 100%;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
