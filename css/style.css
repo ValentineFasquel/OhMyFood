@@ -1,5 +1,5 @@
 body {
-  max-width: 668px;
+  max-width: 768px;
   margin: auto;
   box-sizing: border-box;
   font-family: "roboto";
@@ -17,6 +17,15 @@ a {
 
 header {
   text-align: center;
+  display: block;
+  position: fixed;
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 header img {
   margin: 18px 0 10px 0;
@@ -31,6 +40,7 @@ h1 {
 .location {
   background-color: #eaeaea;
   padding: 10px;
+  margin-top: 60px;
   text-align: center;
   box-shadow: inset 0px 3px 3px #dddddd;
 }
@@ -80,10 +90,11 @@ h1 {
 #functioning {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   margin-bottom: 50px;
 }
-#functioning h1 {
-  padding: 2rem 0 15px 15px;
+#functioning h2 {
+  padding: 20px 15px 15px;
 }
 
 .functioning--elt {
@@ -148,8 +159,8 @@ h1 {
 #restaurants {
   background-color: #f6f6f6;
 }
-#restaurants h1 {
-  padding: 2rem 0 15px 15px;
+#restaurants h2 {
+  padding: 20px 15px 15px;
 }
 
 .restaurant--card {

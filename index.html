@@ -6,10 +6,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:992px) and (min-width:768px)" href="css/tablette.css">
+    <link rel="stylesheet" media="screen and (min-width:992px)" href="css/desktop.css">
+
+
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,10 +53,11 @@
     </section>
 
     <!--SECTION 2 // FUNCTIONING-->
-
+<div class="cols">
     <section id="functioning">
-        <h1>Fonctionnement</h1>
+        <h2>Fonctionnement</h2>
 
+        <div class="display">
         <a href="#"><div class="functioning--elt">
             <div class="functioning--elt__number">1</div>
             <div class="functioning--elt__icon"><i class="fa-solid fa-mobile-screen"></i></div>Choisissez un restaurant
@@ -67,12 +71,15 @@
             <div class="functioning--elt__icon functioning--elt--highlight__icon"><i class="fa-solid fa-store"></i>
             </div>Dégustez au restaurant
         </div></a>
+    </div>
     </section>
 
     <!--SECTION 3 // RESTAURANTS-->
 
     <section id="restaurants">
-        <h1>Restaurants</h1>
+       <h2>Restaurants</h2>
+
+       <div class="display">
 
         <a href="LaPaletteDuGout.html">
         <div class="restaurant--card">
@@ -137,7 +144,11 @@
             </div>
         </div>
     </a> 
+
+</div>
     </section>
+
+</div>
 
     <!--FOOTER-->
 

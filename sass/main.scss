@@ -1,29 +1,10 @@
-$primary : #9356DC;
-$secondary : #ff79da;
-$tertiary : #99e2d0;
-$shadow : #dddddd;
-$background : #f6f6f6;
-$smooth : #7e7e7e;
-$primarylight : #f5edff;
-$darkcolor : #353535;
+@import "../sass/mobile";
+@import "../sass/utils/variables";
+@import "../sass/Utils/mixins";
 
-
-
-@mixin shadow {
-    box-shadow: 8px 8px 15px $shadow;
-}
-
-@mixin strongershadow {
-    box-shadow: 10px 10px 15px darken($shadow, 20%);
-    transition: box-shadow 0.5s ease;
-}
-
-@mixin title {
-    padding:2rem 0 15px 15px;
-}
 
 body {
-    max-width: 668px;
+    max-width: 768px;
     margin:auto;
     box-sizing: border-box;
     font-family:'roboto';
@@ -41,6 +22,15 @@ a {
 
 header {
     text-align:center; 
+    display:block;
+  position:fixed;
+  background-color: white;
+  height:60px;
+  width:100%;
+  margin-top:0;
+  top:0;
+  left:0;
+  z-index:3;
         & img {
         margin:18px 0 10px 0;
         }
@@ -55,6 +45,7 @@ h1 {
 .location {
     background-color: #eaeaea;
     padding:10px;
+    margin-top:60px;
     text-align: center;
     box-shadow: inset 0px 3px 3px $shadow;
         &--form {
@@ -104,8 +95,9 @@ h1 {
 #functioning {
     display:flex;
     flex-direction: column;
+    justify-content: space-around;
     margin-bottom:50px;
-    & h1 {
+    & h2 {
         @include title();
     }
 }
@@ -172,7 +164,7 @@ h1 {
 
 #restaurants {
     background-color: $background;
-        & h1 {
+        & h2 {
             @include title();
         }
 }
