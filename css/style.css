@@ -204,21 +204,32 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-size: 110%;
   position: absolute;
-  left: -2%;
+  left: -1%;
   align-self: center;
-  opacity: 0;
-  /*transform: scale(0);*/
+  transform: scale(0);
 }
-.restaurant--card__like--activated:hover {
-  opacity: 1;
-  transform: scale(1.1);
-  transition: all 0.4s ease;
+.restaurant--card__like:hover .restaurant--card__like--activated {
+  animation: liked 1s both ease;
 }
 .restaurant--card:hover {
   box-shadow: 10px 10px 15px #aaaaaa;
   transition: box-shadow 0.5s ease;
 }
 
+@keyframes liked {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1);
+  }
+  95% {
+    transform: translatex(3%);
+  }
+  100% {
+    transform: translatex(-3%);
+  }
+}
 footer {
   background-color: #353535;
   color: white;
