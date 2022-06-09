@@ -177,7 +177,7 @@ h1 {
   padding: 0.5em 1em;
   margin-top: 0.6rem;
   position: absolute;
-  right: 1.8rem;
+  margin-left: 62%;
   border-radius: 3px;
 }
 .restaurant--card__image {
@@ -204,7 +204,7 @@ h1 {
   font-weight: 100;
   align-self: center;
   position: absolute;
-  left: 80%;
+  margin-left: 75%;
   z-index: 0;
 }
 .restaurant--card__like--activated {
@@ -214,8 +214,8 @@ h1 {
   color: transparent;
   -webkit-text-fill-color: transparent;
   font-size: 110%;
+  margin-left: -100%;
   position: absolute;
-  left: -1%;
   align-self: center;
   transform: scale(0);
 }
