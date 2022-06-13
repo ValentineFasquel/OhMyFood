@@ -1,6 +1,7 @@
-@import "../sass/mobile";
+
 @import "../sass/utils/variables";
 @import "../sass/Utils/mixins";
+@import "../sass/Pages/Menu.scss";
 
 
 body {
@@ -37,7 +38,7 @@ header {
 }
 
 h1 {
-    font-size:160%;
+    font-size:28px;
     letter-spacing:-1px;
     font-weight: 700;
 }
@@ -60,7 +61,7 @@ h1 {
         }
 }
 
-#explore {
+.explore {
     background-color: $background;
     text-align:center;
     padding:45px 3rem;
@@ -111,7 +112,7 @@ h1 {
     margin:auto;
     margin-top:20px;
     font-weight: 600;
-    font-size: 90%;;
+    font-size: 14px;
     display:flex;
     position:relative;
     justify-content: space-around;
@@ -119,7 +120,7 @@ h1 {
         &__icon {
             color: $smooth;
             display: flex;
-            font-size: 110%;
+            font-size: 18px;
         }
         &__number {
             background-color: $primary;
@@ -162,7 +163,7 @@ h1 {
     color:$primary;
 }
 
-#restaurants {
+.restaurants {
     background-color: $background;
         & h2 {
             @include title();
@@ -208,7 +209,7 @@ h1 {
                 }
         }
         &__like {
-            font-size:140%;
+            font-size:24px;
             font-weight:100;
             align-self:center;
             position:absolute;
@@ -220,7 +221,7 @@ h1 {
                 -webkit-background-clip: text;
                 color:transparent;     
                 -webkit-text-fill-color: transparent;
-                font-size: 110%;
+                font-size: 26px;
                 margin-left:-100%;
                 position:absolute;
                 align-self: center;
@@ -261,7 +262,7 @@ footer {
         & h4 {
             font-family: shrikhand;
             font-weight:50;
-            font-size:120%;
+            font-size:18px;;
             letter-spacing:normal;
             padding:23px 0 0 35px;
         }
@@ -271,36 +272,3 @@ footer {
         & .fas {padding-right:10px;}
 }
 
-/* PAGE MENU */
-
-nav {
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-right:22%;
-}
-
-.fa-arrow-left {
-    font-size:130%;
-    color:$darkcolor;
-
-}
-
-.menu {
-    background-color: $background;
-    display:flex;
-    border-radius:30px 30px 0 0;
-    margin-top: -20%;
-    position:relative;
-    width:100%;
-    z-index:2;
-        & h1 {
-            font-family:shrikhand;
-            font-weight:200;
-            text-align:center;
-        }
-    &--image {
-     width:100%;
-     z-index: 1;
-    }
-}
