@@ -23,7 +23,6 @@ nav {
 .menu h1 {
   font-family: shrikhand;
   font-weight: 200;
-  margin: 15px 0 20px 10px;
 }
 .menu--image {
   width: 100%;
@@ -32,9 +31,16 @@ nav {
   overflow: hidden;
 }
 
-.entree--title {
+.restaurantname {
+  display: flex;
+  align-items: center;
+  margin: 15px 0 20px 10px;
+}
+
+.course--title {
   color: #353535;
   margin-bottom: 4px;
+  margin-top: 40px;
 }
 
 .card {
@@ -47,6 +53,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  animation: cardappariton 2s both ease;
 }
 .card--text {
   flex-direction: column;
@@ -61,21 +68,58 @@ nav {
 }
 .card--price {
   font-weight: 600;
-  margin-right: 20px;
   margin-bottom: 5px;
+  margin-right: -60px;
+  transform: translateX(0);
+  transition: transform 0.7s ease;
+}
+.card:hover > .checked-background {
+  /*animation: checked-background-animation 0.5s forwards ease;*/
+  transform: scaleX(1);
+}
+.card:hover .checked {
+  animation: checked-animation 0.6s 0.1s both ease;
+}
+.card:hover .card--price {
+  transform: translateX(-50px);
 }
 
 .checked {
-  background-color: #99e2d0;
   color: white;
   font-size: 28px;
+  display: flex;
+  transform: scale(1);
+}
+.checked-background {
+  background-color: #99e2d0;
   border-radius: 0 20px 20px 0;
-  height: fit-content;
-  width: 60px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  align-content: center;
-  /*display:none;*/
+  height: 80px;
+  width: 60px;
+  margin-bottom: -10px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  clip: inherit;
+}
+
+@keyframes checked-animation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes checked-background-animation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 .greenline {
   height: 4px;
@@ -83,11 +127,37 @@ nav {
   background-color: #99e2d0;
   transform: translateX(4000px);
   animation: greenline-entrance 0.6s both;
+  margin-bottom: 20px;
 }
 
 @keyframes greenline-entrance {
   100% {
     transform: translateX(0px);
+  }
+}
+.commandbutton {
+  width: 60%;
+  margin: 50px 20%;
+}
+
+@keyframes cardapparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes cardapparition {
+  from {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 body {
@@ -170,7 +240,6 @@ h1 {
   color: white;
   font-weight: 500;
   letter-spacing: 0.5px;
-  margin-top: 10px;
 }
 .button:hover {
   box-shadow: 10px 10px 15px #aaaaaa;
@@ -179,13 +248,13 @@ h1 {
   transition: transform 0.2s ease;
 }
 
-#functioning {
+.functioning {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-bottom: 50px;
 }
-#functioning h2 {
+.functioning h2 {
   padding: 20px 15px 15px;
 }
 
@@ -312,7 +381,7 @@ h1 {
   transform: scale(0);
 }
 .restaurant--card__like:hover .restaurant--card__like--activated {
-  animation: liked 1s both ease;
+  animation: liked 0.6s both ease;
 }
 .restaurant--card:hover {
   box-shadow: 10px 10px 15px #aaaaaa;
@@ -324,13 +393,13 @@ h1 {
     transform: scale(0);
   }
   90% {
-    transform: scale(1);
+    transform: scale(1) translateX(3%);
   }
   95% {
-    transform: translatex(3%);
+    transform: translateX(-3%);
   }
   100% {
-    transform: translatex(-3%);
+    transform: translatex(0);
   }
 }
 footer {

@@ -25,7 +25,6 @@ nav {
         & h1 {
             font-family:shrikhand;
             font-weight:200;
-            margin: 15px 0 20px 10px;
         }
     &--image {
      width:100%;
@@ -35,10 +34,17 @@ nav {
     }
 }
 
-.entree {
+.restaurantname {
+    display:flex;
+    align-items:center ;
+    margin: 15px 0 20px 10px;
+}
+
+.course {
         &--title {
             color: $darkcolor;
             margin-bottom:4px;
+            margin-top:40px;
         }
     }
 .card {
@@ -51,6 +57,7 @@ nav {
     display:flex;
     justify-content: space-between;
     align-items: flex-end;
+    animation: cardappariton 2s both ease;
          &--text {
             flex-direction: column;
         }
@@ -64,25 +71,64 @@ nav {
         }
         &--price {
            font-weight: 600;
-           margin-right:20px;
            margin-bottom: 5px;
+           margin-right:-60px;
+           transform: translateX(0);
+           transition:transform 0.7s ease;
         }
-}
+
+        &:hover > .checked-background {
+            /*animation: checked-background-animation 0.5s forwards ease;*/
+            transform:scaleX(1);
+        }
+        &:hover  .checked {
+            animation: checked-animation 0.6s  0.1s both ease;
+        }
+        &:hover .card--price {
+            transform:translateX(-50px);
+        }
+    }
 
 .checked {
-    background-color: $tertiary;
     color:white;
     font-size:28px;
-    border-radius: 0 20px 20px 0;
-    height:fit-content;
-    width:60px;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    /*display:none;*/
-        &:hover {
+    display:flex;
+    transform:scale(1);
 
-        }
+    &-background {
+        background-color: $tertiary;
+        border-radius: 0 20px 20px 0;
+        display:flex;
+        align-items: center;
+        justify-content: center;     
+        height:80px;
+        width:60px;
+       margin-bottom:-10px;
+        transform-origin: right;
+        transform:scaleX(0);
+        transition: transform 0.5s ease;
+        clip: inherit;
+    }
+}
+
+
+
+@keyframes checked-animation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes checked-background-animation {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 
@@ -92,6 +138,7 @@ nav {
     background-color: $tertiary;
     transform: translateX(4000px);
     animation: greenline-entrance 0.6s  both;
+    margin-bottom:20px;
 }
 
 @keyframes greenline-entrance {
@@ -100,3 +147,30 @@ nav {
     }
 }
 
+
+.commandbutton {
+    width:60%;
+    margin:50px 20%;
+}
+
+
+@keyframes cardapparition {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes cardapparition {
+    from {
+      -webkit-transform: translateY(15px);
+              transform: translateY(15px);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }

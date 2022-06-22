@@ -8,7 +8,7 @@ body {
 }
 
 
-  #functioning {
+  .functioning {
     justify-content:flex-start;
     align-content: flex-end;
     width:30%;
@@ -18,7 +18,7 @@ body {
       margin-top:25px;
   }
 
-  #restaurants {
+  .restaurants {
     background-color: white;
   }
 
