@@ -39,7 +39,7 @@ header {
 }
 
 h1 {
-    font-size:28px;
+    font-size:32px;
     letter-spacing:-1px;
     font-weight: 700;
 }
@@ -106,21 +106,22 @@ h1 {
 .functioning--elt {
     background-color: $background;
     @include shadow();
-    width:240px;
+    width:80%;
     padding:24px 18px;
     border-radius:20px;
     margin:auto;
     margin-top:20px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     display:flex;
     position:relative;
-    justify-content: space-around;
     z-index: 1;
         &__icon {
             color: $smooth;
             display: flex;
             font-size: 18px;
+            width:40px;
+            padding-left:20px;
         }
         &__number {
             background-color: $primary;
@@ -130,7 +131,7 @@ h1 {
             font-weight: 400;
             padding:4px 6px 2px 6px;
             position:absolute;
-            margin-left:-270px;
+            left:-5px;
         }
         &:hover {
             @include strongershadow();
@@ -165,6 +166,7 @@ h1 {
 
 .restaurants {
     background-color: $background;
+    padding-bottom:20px;
         & h2 {
             @include title();
         }
@@ -176,6 +178,7 @@ h1 {
     width:90%;
     margin:auto;
     margin-bottom:20px;
+    position:relative;
         &__new {
             background-color:$tertiary;
             color: darken($tertiary,40%);
@@ -183,7 +186,8 @@ h1 {
             padding: 0.5em 1em;
             margin-top:0.6rem;
             position: absolute;
-            margin-left:62%;;
+            /*margin-left:62%;;*/;
+            right:15px;
             border-radius: 3px;
         }
         &__image {
@@ -213,7 +217,7 @@ h1 {
             font-weight:100;
             align-self:center;
             position:absolute;
-            margin-left:75%;
+            right:25px;
             z-index: 0;
             &--activated {
                 background-image:linear-gradient(to top, $secondary, $primary);
@@ -221,10 +225,11 @@ h1 {
                 -webkit-background-clip: text;
                 color:transparent;     
                 -webkit-text-fill-color: transparent;
-                font-size: 26px;
-                margin-left:-100%;
+                font-size: 28px;
+                /*margin-left:-100%;*/;
+                right:0px;
                 position:absolute;
-                align-self: center;
+                /*align-self: center;*/
                 transform: scale(0);
                     }
             &:hover .restaurant--card__like--activated {
@@ -246,16 +251,20 @@ footer {
     background-color: $darkcolor;
     color:white;
     padding-bottom:20px;
+        & ul {
+            padding-left:30px;
+        }
         & h4 {
             font-family: shrikhand;
             font-weight:50;
             font-size:18px;;
             letter-spacing:normal;
-            padding:23px 0 0 35px;
+            padding:23px 0 0 30px;
+            margin-top:0;
         }
         & li {
             padding:3px;
         }
-        & .fas {padding-right:10px;}
+        & .icon {width:35px;}
 }
 

@@ -26,6 +26,7 @@ nav {
 }
 .menu--image {
   width: 100%;
+  height: 330px;
   z-index: 1;
   object-fit: cover;
   overflow: hidden;
@@ -35,12 +36,15 @@ nav {
   display: flex;
   align-items: center;
   margin: 15px 0 20px 10px;
+  font-size: 56px;
 }
 
 .course--title {
   color: #353535;
   margin-bottom: 4px;
   margin-top: 40px;
+  margin-left: 5px;
+  font-size: 20px;
 }
 
 .card {
@@ -56,19 +60,30 @@ nav {
 }
 .card--text {
   flex-direction: column;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card--title {
   font-weight: 600;
   font-size: 20px;
   margin: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card--details {
   margin: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card--price {
   font-weight: 600;
   margin-bottom: 5px;
-  margin-right: -60px;
+  margin-right: -80px;
+  padding-right: 40px;
   transform: translateX(0);
   transition: transform 0.7s ease;
 }
@@ -111,6 +126,7 @@ nav {
   transform: translateX(4000px);
   animation: greenline-entrance 0.6s 1.2s both;
   margin-bottom: 20px;
+  margin-left: 5px;
 }
 
 .commandbutton {
@@ -161,6 +177,11 @@ nav {
 .card9 {
   animation: cardapparition 0.6s both ease;
   animation-delay: 1.8s;
+}
+
+.card10 {
+  animation: cardapparition 0.6s both ease;
+  animation-delay: 2s;
 }
 
 /*LIKE ANIMATION*/
@@ -248,7 +269,7 @@ header img {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 32px;
   letter-spacing: -1px;
   font-weight: 700;
 }
@@ -309,28 +330,29 @@ h1 {
   margin-bottom: 50px;
 }
 .functioning h2 {
-  padding: 20px 15px 15px;
+  padding: 20px 15px 15px 30px;
 }
 
 .functioning--elt {
   background-color: #f6f6f6;
   box-shadow: 8px 8px 15px #dddddd;
-  width: 240px;
+  width: 80%;
   padding: 24px 18px;
   border-radius: 20px;
   margin: auto;
   margin-top: 20px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   position: relative;
-  justify-content: space-around;
   z-index: 1;
 }
 .functioning--elt__icon {
   color: #7e7e7e;
   display: flex;
   font-size: 18px;
+  width: 40px;
+  padding-left: 20px;
 }
 .functioning--elt__number {
   background-color: #9356DC;
@@ -340,7 +362,7 @@ h1 {
   font-weight: 400;
   padding: 4px 6px 2px 6px;
   position: absolute;
-  margin-left: -270px;
+  left: -5px;
 }
 .functioning--elt:hover {
   box-shadow: 10px 10px 15px #aaaaaa;
@@ -373,9 +395,10 @@ h1 {
 
 .restaurants {
   background-color: #f6f6f6;
+  padding-bottom: 20px;
 }
 .restaurants h2 {
-  padding: 20px 15px 15px;
+  padding: 20px 15px 15px 30px;
 }
 
 .restaurant--card {
@@ -384,6 +407,7 @@ h1 {
   width: 90%;
   margin: auto;
   margin-bottom: 20px;
+  position: relative;
 }
 .restaurant--card__new {
   background-color: #99e2d0;
@@ -392,7 +416,8 @@ h1 {
   padding: 0.5em 1em;
   margin-top: 0.6rem;
   position: absolute;
-  margin-left: 62%;
+  /*margin-left:62%;;*/
+  right: 15px;
   border-radius: 3px;
 }
 .restaurant--card__image {
@@ -419,7 +444,7 @@ h1 {
   font-weight: 100;
   align-self: center;
   position: absolute;
-  margin-left: 75%;
+  right: 25px;
   z-index: 0;
 }
 .restaurant--card__like--activated {
@@ -428,10 +453,11 @@ h1 {
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  font-size: 26px;
-  margin-left: -100%;
+  font-size: 28px;
+  /*margin-left:-100%;*/
+  right: 0px;
   position: absolute;
-  align-self: center;
+  /*align-self: center;*/
   transform: scale(0);
 }
 .restaurant--card__like:hover .restaurant--card__like--activated {
@@ -447,18 +473,22 @@ footer {
   color: white;
   padding-bottom: 20px;
 }
+footer ul {
+  padding-left: 30px;
+}
 footer h4 {
   font-family: shrikhand;
   font-weight: 50;
   font-size: 18px;
   letter-spacing: normal;
-  padding: 23px 0 0 35px;
+  padding: 23px 0 0 30px;
+  margin-top: 0;
 }
 footer li {
   padding: 3px;
 }
-footer .fas {
-  padding-right: 10px;
+footer .icon {
+  width: 35px;
 }
 
 /*# sourceMappingURL=style.css.map */
