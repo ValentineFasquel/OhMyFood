@@ -10,3 +10,7 @@
 @mixin title {
     padding:20px 15px 15px;
 }
+
+@mixin cardapparition {
+    animation: cardapparition 0.6s both ease;
+}

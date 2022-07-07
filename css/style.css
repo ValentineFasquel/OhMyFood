@@ -53,7 +53,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  animation: cardappariton 2s both ease;
 }
 .card--text {
   flex-direction: column;
@@ -105,6 +104,81 @@ nav {
   clip: inherit;
 }
 
+.greenline {
+  height: 4px;
+  width: 50px;
+  background-color: #99e2d0;
+  transform: translateX(4000px);
+  animation: greenline-entrance 0.6s 1.2s both;
+  margin-bottom: 20px;
+}
+
+.commandbutton {
+  width: 60%;
+  margin: 50px 20%;
+}
+
+.card1 {
+  animation: cardapparition 0.6s both ease;
+  animation-delay: 0.2s;
+}
+
+.card2 {
+  animation: cardapparition 0.6s both ease;
+  animation-delay: 0.4s;
+}
+
+.card3 {
+  animation: cardapparition 0.6s both ease;
+  animation-delay: 0.6s;
+}
+
+.card4 {
+  animation: cardapparition 0.6s both ease;
+  animation-delay: 0.8s;
+}
+
+.card5 {
+  animation: cardapparition 0.6s both ease;
+  animation-delay: 1s;
+}
+
+.card6 {
+  animation: cardapparition 0.6s both ease;
+  animation-delay: 1.2s;
+}
+
+.card7 {
+  animation: cardapparition 0.6s both ease;
+  animation-delay: 1.4s;
+}
+
+.card8 {
+  animation: cardapparition 0.6s both ease;
+  animation-delay: 1.6s;
+}
+
+.card9 {
+  animation: cardapparition 0.6s both ease;
+  animation-delay: 1.8s;
+}
+
+/*LIKE ANIMATION*/
+@keyframes liked {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1) translateX(3%);
+  }
+  95% {
+    transform: translateX(-3%);
+  }
+  100% {
+    transform: translatex(0);
+  }
+}
+/*CHECKED ANIMATION*/
 @keyframes checked-animation {
   0% {
     transform: rotate(0);
@@ -121,33 +195,13 @@ nav {
     transform: scaleX(1);
   }
 }
-.greenline {
-  height: 4px;
-  width: 50px;
-  background-color: #99e2d0;
-  transform: translateX(4000px);
-  animation: greenline-entrance 0.6s both;
-  margin-bottom: 20px;
-}
-
+/*GREENLINE APPARITION*/
 @keyframes greenline-entrance {
   100% {
     transform: translateX(0px);
   }
 }
-.commandbutton {
-  width: 60%;
-  margin: 50px 20%;
-}
-
-@keyframes cardapparition {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+/*CARD APPARITION*/
 @keyframes cardapparition {
   from {
     -webkit-transform: translateY(15px);
@@ -388,20 +442,6 @@ h1 {
   transition: box-shadow 0.5s ease;
 }
 
-@keyframes liked {
-  0% {
-    transform: scale(0);
-  }
-  90% {
-    transform: scale(1) translateX(3%);
-  }
-  95% {
-    transform: translateX(-3%);
-  }
-  100% {
-    transform: translatex(0);
-  }
-}
 footer {
   background-color: #353535;
   color: white;
