@@ -6,10 +6,13 @@
 
 
 body {
-    max-width: 768px;
     margin:auto;
     box-sizing: border-box;
     font-family:'roboto';
+}
+
+.centre {
+    /*max-width:1440px;*/
 }
 
 ul {
@@ -23,8 +26,8 @@ a {
 }
 
 header {
-    text-align:center; 
-    display:block;
+  text-align:center; 
+  display:block;
   position:fixed;
   background-color: white;
   height:60px;

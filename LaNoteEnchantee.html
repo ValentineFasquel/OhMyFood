@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:992px) and (min-width:768px)" href="css/tablette.css">
+    <link rel="stylesheet" media="screen and (min-width:992px)" href="css/desktop.css">
+
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,16 +39,17 @@
         <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée"
             class="menu--image">
         <div class="menu">
-            <div class="restaurantname">
+            <div class="restaurantname centre">
                 <h1>La note enchantée</h1>
 
                 <div class="restaurant--card__like"><i class="fa-regular fa-heart"></i> <i
                         class="fa-solid fa-heart restaurant--card__like--activated"></i></div>
             </div>
 
-            <div class="course">
+            <div class="course centre">
 
                 <!--ENTREES-->
+                <div class="course--category">
                 <p class="course--title">ENTRÉES</p>
                 <div class="greenline"></div>
 
@@ -101,9 +105,11 @@
                         <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
                     </div>
                 </a></div>
+            </div>
 
 
                 <!--PLATS-->
+                <div class="course--category">
                 <p class="course--title">PLATS</p>
                 <div class="greenline"></div>
 
@@ -145,9 +151,11 @@
                         <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
                     </div>
                 </a></div>
+            </div>
 
 
                 <!--DESSERTS-->
+                <div class="course--category">
                 <p class="course--title">DESSERTS</p>
                 <div class="greenline"></div>
 
@@ -189,6 +197,8 @@
                         <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
                     </div>
                 </a></div>
+            </div>
+            </div>
                 <!--BUTTON-->
 
                 <form><input class="button commandbutton" type="submit" value="Commander"></form>
@@ -205,14 +215,18 @@
     <!--FOOTER-->
     <footer>
 
-        <h4>ohmyfood</h4>
+        <div class="footercontainer centre">
 
-        <ul>
-            <li> <a href="#"><i class="fas fa-utensils icon"> </i>Proposer un restaurant</li></a>
-            <li> <a href="#"><i class="fas fa-handshake icon"> </i>Devenir partenaire</li></a>
-            <li> <a href="#">Mentions légales</li></a>
-            <li> <a href="#">Contact</li></a>
-        </ul>
+            <h4>ohmyfood</h4>
+    
+            <ul>
+                <li> <a href="#"><i class="fas fa-utensils icon"> </i>Proposer un restaurant</li></a>
+                <li> <a href="#"><i class="fas fa-handshake icon"> </i>Devenir partenaire</li></a>
+                <li> <a href="#">Mentions légales</li></a>
+                <li> <a href="#">Contact</li></a>
+            </ul>
+    
+        </div>
 
     </footer>
 

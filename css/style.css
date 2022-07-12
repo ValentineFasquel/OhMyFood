@@ -236,10 +236,14 @@ nav {
   }
 }
 body {
-  max-width: 768px;
   margin: auto;
   box-sizing: border-box;
   font-family: "roboto";
+  width: 100%;
+}
+
+.centre {
+  /*max-width:1440px;*/
 }
 
 ul {
