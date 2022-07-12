@@ -1,31 +1,19 @@
-$primary : #9356DC;
-$secondary : #ff79da;
-$tertiary : #99e2d0;
-$shadow : #dddddd;
-$background : #f6f6f6;
-$smooth : #7e7e7e;
-$primarylight : #f5edff;
-$darkcolor : #353535;
 
-
-@mixin shadow {
-    box-shadow: 8px 8px 15px $shadow;
-}
-
-@mixin strongershadow {
-    box-shadow: 10px 10px 15px darken($shadow, 20%);
-    transition: box-shadow 0.5s ease;
-}
-
-@mixin title {
-    padding:2rem 0 15px 15px;
-}
+@import "../sass/utils/variables";
+@import "../sass/Utils/mixins";
+@import "../sass/Pages/Menu.scss";
+@import"../sass/Utils/keyframes.scss";
+@import"../sass/Utils/loader.scss";
 
 body {
-    max-width: 668px;
     margin:auto;
     box-sizing: border-box;
     font-family:'roboto';
+    position:relative;
+}
+
+.centre {
+    /*max-width:1440px;*/
 }
 
 ul {
@@ -39,14 +27,23 @@ a {
 }
 
 header {
-    text-align:center; 
+  text-align:center; 
+  display:block;
+  position:fixed;
+  background-color: white;
+  height:60px;
+  width:100%;
+  margin-top:0;
+  top:0;
+  left:0;
+  z-index:3;
         & img {
         margin:18px 0 10px 0;
         }
 }
 
 h1 {
-    font-size:160%;
+    font-size:32px;
     letter-spacing:-1px;
     font-weight: 700;
 }
@@ -54,6 +51,7 @@ h1 {
 .location {
     background-color: #eaeaea;
     padding:10px;
+    margin-top:60px;
     text-align: center;
     box-shadow: inset 0px 3px 3px $shadow;
         &--form {
@@ -68,7 +66,7 @@ h1 {
         }
 }
 
-#explore {
+.explore {
     background-color: $background;
     text-align:center;
     padding:45px 3rem;
@@ -87,12 +85,11 @@ h1 {
     padding:20px;
     border:none;
     border-radius: 30px;
-    background-image: linear-gradient(to bottom right, $secondary, $primary);
+    @include gradient;
     @include shadow();
     color:white;
     font-weight:500;
     letter-spacing: 0.5px;;
-    margin-top:10px;
         &:hover {
             @include strongershadow();
             transform: scale(1.03);
@@ -100,11 +97,12 @@ h1 {
         }
 }
 
-#functioning {
+.functioning {
     display:flex;
     flex-direction: column;
+    justify-content: space-around;
     margin-bottom:50px;
-    & h1 {
+    & h2 {
         @include title();
     }
 }
@@ -112,21 +110,22 @@ h1 {
 .functioning--elt {
     background-color: $background;
     @include shadow();
-    width:240px;
+    width:80%;
     padding:24px 18px;
     border-radius:20px;
     margin:auto;
     margin-top:20px;
     font-weight: 600;
-    font-size: 90%;;
+    font-size: 16px;
     display:flex;
     position:relative;
-    justify-content: space-around;
     z-index: 1;
         &__icon {
             color: $smooth;
             display: flex;
-            font-size: 110%;
+            font-size: 18px;
+            width:40px;
+            padding-left:20px;
         }
         &__number {
             background-color: $primary;
@@ -136,11 +135,10 @@ h1 {
             font-weight: 400;
             padding:4px 6px 2px 6px;
             position:absolute;
-            margin-left:-270px;
+            left:-5px;
         }
         &:hover {
             @include strongershadow();
-
         }
 }
 
@@ -148,21 +146,21 @@ h1 {
     background: $primarylight;
     content: "";
     position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    top:0;
+    left:0;
+    transform: scaleX(0);
+    transform-origin: left;
     z-index: -1;
-    width:240px;
+    width: 100%;
     border-radius:20px;
     margin:auto;
-    transition:all 0.4s ease-out;
-    width:0%;
+    transition:all 0.3s ease-in-out;
     height:100%;
-    transform: rotate (70deg) translate (-50%, -50%) ;
 }
 
 .functioning--elt:hover::before {
-    width:100%;
+    transform: scaleX(1);
+
 
 }
 
@@ -170,9 +168,10 @@ h1 {
     color:$primary;
 }
 
-#restaurants {
+.restaurants {
     background-color: $background;
-        & h1 {
+    padding-bottom:20px;
+        & h2 {
             @include title();
         }
 }
@@ -183,6 +182,7 @@ h1 {
     width:90%;
     margin:auto;
     margin-bottom:20px;
+    position:relative;
         &__new {
             background-color:$tertiary;
             color: darken($tertiary,40%);
@@ -190,7 +190,8 @@ h1 {
             padding: 0.5em 1em;
             margin-top:0.6rem;
             position: absolute;
-            right: 1.8rem;
+            /*margin-left:62%;;*/;
+            right:15px;
             border-radius: 3px;
         }
         &__image {
@@ -216,30 +217,29 @@ h1 {
                 }
         }
         &__like {
-            font-size:140%;
+            font-size:24px;
             font-weight:100;
             align-self:center;
             position:absolute;
-            left:80%;
+            right:25px;
             z-index: 0;
-                &--activated {
-                    background-image:linear-gradient(to top, $secondary, $primary);
-                    background-clip:text;
-                    -webkit-background-clip: text;
-                    color:transparent;     
-                    -webkit-text-fill-color: transparent;
-                    font-size: 110%;
-                    position:absolute;
-                    left:-2%;
-                    align-self: center;
-                    opacity: 0;
-                    /*transform: scale(0);*/
-                        &:hover {
-                            opacity:1;
-                            transform: scale(1.1);
-                            transition: all 0.4s ease;
-                        }
+            &--activated {
+                background-image:linear-gradient(to top, $secondary, $primary);
+                background-clip:text;
+                -webkit-background-clip: text;
+                color:transparent;     
+                -webkit-text-fill-color: transparent;
+                font-size: 28px;
+                right:0px;
+                position:absolute;
+                transform: scale(0);
+                    }
+            &:hover .restaurant--card__like--activated {
+                animation:liked 0.6s both ease;
                 }
+            &:hover .restaurant--card__like {
+                transform:scale(0);
+            }
             
             }
 
@@ -249,53 +249,26 @@ h1 {
         }
 
 
+
+
 footer {
     background-color: $darkcolor;
     color:white;
     padding-bottom:20px;
+        & ul {
+            padding-left:30px;
+        }
         & h4 {
             font-family: shrikhand;
             font-weight:50;
-            font-size:120%;
+            font-size:18px;;
             letter-spacing:normal;
-            padding:23px 0 0 35px;
+            padding:23px 0 0 30px;
+            margin-top:0;
         }
         & li {
             padding:3px;
         }
-        & .fas {padding-right:10px;}
+        & .icon {width:35px;}
 }
 
-/* PAGE MENU */
-
-nav {
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-right:22%;
-}
-
-.fa-arrow-left {
-    font-size:130%;
-    color:$darkcolor;
-
-}
-
-.menu {
-    background-color: $background;
-    display:flex;
-    border-radius:30px 30px 0 0;
-    margin-top: -20%;
-    position:relative;
-    width:100%;
-    z-index:2;
-        & h1 {
-            font-family:shrikhand;
-            font-weight:200;
-            text-align:center;
-        }
-    &--image {
-     width:100%;
-     z-index: 1;
-    }
-}

@@ -1,0 +1,86 @@
+/* INDEX */
+
+/* GENERAL */
+  .centre {
+    max-width:1440px;
+    margin:0 auto;
+  }
+
+  .cols {
+    display:flex;
+}
+
+
+  .functioning {
+    justify-content:flex-start;
+    align-content: flex-end;
+    width:30%;
+  }
+
+  .functioning--elt {
+      margin-top:25px;
+  }
+
+  .restaurants {
+    background-color: white;
+  }
+
+  .display {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+ 
+  .restaurant--card {
+    width: 500px;
+    margin: 20px;;
+  }
+  .restaurant--card__new {
+    margin-left:24.5rem;
+  }
+
+  .restaurant--card__like {
+    margin-left:440px;
+  }
+
+
+  footer ul {
+    display:flex;
+    justify-content: space-around;
+    margin-left:50px;
+  }
+
+
+  
+  /* PAGE MENU */
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 22%;
+  }
+  
+  .fa-arrow-left {
+    font-size: 130%;
+    color: #353535;
+  }
+
+  .course {
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+  }
+  
+  .course--category {
+    width:30%;
+  }
+
+  .commandbutton {
+    width:30%;
+    text-align:center;
+    margin-left:35%;
+
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  

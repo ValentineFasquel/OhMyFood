@@ -6,10 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:992px) and (min-width:768px)" href="css/tablette.css">
+    <link rel="stylesheet" media="screen and (min-width:992px)" href="css/desktop.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,33 +26,196 @@
     <script src="https://kit.fontawesome.com/8056cf0d7c.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 
     <header>
-       <nav> <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a><img src="images/logo/ohmyfood.png" alt="logo OhMyFood" width="200"></nav>
+        <nav> <a href="index.html"><i class="fa-solid fa-arrow-left arrow-left"></i></a><img
+                src="images/logo/ohmyfood.png" alt="logo OhMyFood" width="200"></nav>
     </header>
 
     <main>
-        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="menu--image">
+        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût"
+            class="menu--image">
         <div class="menu">
-            <h1>La palette du goût</h1>
+            <div class="restaurantname centre">
+                <h1>La palette du goût</h1>
+
+                <div class="restaurant--card__like"><i class="fa-regular fa-heart"></i> <i
+                        class="fa-solid fa-heart restaurant--card__like--activated"></i></div>
+            </div>
+
+            <div class="course centre">
+
+                <!--ENTREES-->
+                <div class="course--category">
+                    <p class="course--title">ENTRÉES</p>
+                    <div class="greenline"></div>
+
+                    <div class="card1"><a href="#">
+                            <div class="card">
+                                <div class="card--text">
+                                    <p class="card--title">Fricassée d'escargot</p>
+                                    <p class="card--details">Au piment d'espelette</p>
+                                </div>
+                                <div class="card--price">
+                                    25€
+                                </div>
+                                <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card2"><a href="#">
+                            <div class="card">
+                                <div class="card--text">
+                                    <p class="card--title">Foie gras de canard mi-cuit</p>
+                                    <p class="card--details">Et ses copeaux de truffe noire</p>
+                                </div>
+                                <div class="card--price">
+                                    35€
+                                </div>
+                                <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </a></div>
+
+                    <div class="card3"><a href="#">
+                            <div class="card">
+                                <div class="card--text">
+                                    <p class="card--title">Oeuf au plat</p>
+                                    <p class="card--details">Assaisoné à la truffe sur lit de caviar</p>
+                                </div>
+                                <div class="card--price">
+                                    20€
+                                </div>
+                                <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </a></div>
+
+                </div>
+
+                <!--PLATS-->
+                <div class="course--category">
+                    <p class="course--title">PLATS</p>
+                    <div class="greenline"></div>
+
+                    <div class="card4"><a href="#">
+                            <div class="card">
+                                <div class="card--text">
+                                    <p class="card--title">Filet de boeuf aux herbes</p>
+                                    <p class="card--details">Accompagné de sa ribambelle de légumes</p>
+                                </div>
+                                <div class="card--price">
+                                    40€
+                                </div>
+                                <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </a></div>
+
+                    <div class="card5"><a href="#">
+                            <div class="card">
+                                <div class="card--text">
+                                    <p class="card--title">Parmentier de queue de boeuf</p>
+                                    <p class="card--details">À la truffe noire sur sa purée de panais</p>
+                                </div>
+                                <div class="card--price">
+                                    35€
+                                </div>
+                                <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </a></div>
+
+                    <div class="card6"><a href="#">
+                            <div class="card">
+                                <div class="card--text">
+                                    <p class="card--title">Filet de turbot</p>
+                                    <p class="card--details">Aux agrumes</p>
+                                </div>
+                                <div class="card--price">
+                                    44€
+                                </div>
+                                <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </a></div>
+                </div>
+
+                <!--DESSERTS-->
+                <div class="course--category">
+                    <p class="course--title">DESSERTS</p>
+                    <div class="greenline"></div>
+
+                    <div class="card7"><a href="#">
+                            <div class="card">
+                                <div class="card--text">
+                                    <p class="card--title">Paris-Brest</p>
+                                    <p class="card--details">Revisité</p>
+                                </div>
+                                <div class="card--price">
+                                    18€
+                                </div>
+                                <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </a></div>
+
+                    <div class="card8"><a href="#">
+                            <div class="card">
+                                <div class="card--text">
+                                    <p class="card--title">Macaron au chocolat d'exception</p>
+                                    <p class="card--details">Et glace à la vanille de Madagascar</p>
+                                </div>
+                                <div class="card--price">
+                                    22€
+                                </div>
+                                <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </a></div>
+
+                    <div class="card9"><a href="#">
+                            <div class="card">
+                                <div class="card--text">
+                                    <p class="card--title">Mousse au chocolat</p>
+                                    <p class="card--details">Au piment d'espelette et à la truffe noire</p>
+                                </div>
+                                <div class="card--price">
+                                    23€
+                                </div>
+                                <div class="checked-background"><i class="checked fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </a></div>
+                </div>
+            </div>
+            <!--BUTTON-->
+
+            <form><input class="button commandbutton" type="submit" value="Commander"></form>
+
         </div>
+
+
+
+
+
+
     </main>
 
-
+    <!--FOOTER-->
     <footer>
 
-        <h4>ohmyfood</h4>
-    
-        <ul>
-            <li> <i class="fas fa-utensils"> </i> Proposer un restaurant</li>
-            <li> <i class="fas fa-handshake"> </i>Devenir partenaire</li>
-            <li> Mentions légales</li>
-            <li>Contact</li>
-        </ul>
-    
+        <div class="footercontainer centre">
+
+            <h4>ohmyfood</h4>
+
+            <ul>
+                <li> <a href="#"><i class="fas fa-utensils icon"> </i>Proposer un restaurant</a></li>
+                <li> <a href="#"><i class="fas fa-handshake icon"> </i>Devenir partenaire</a></li>
+                <li> <a href="#">Mentions légales</a></li>
+                <li> <a href="#">Contact</a></li>
+            </ul>
+
+        </div>
+
     </footer>
-    
+
+
 
 </body>
 
