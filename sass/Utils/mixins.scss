@@ -14,3 +14,7 @@
 @mixin cardapparition {
     animation: cardapparition 0.6s both ease;
 }
+
+@mixin gradient {
+    background-image: linear-gradient(to bottom right, $secondary, $primary);
+}

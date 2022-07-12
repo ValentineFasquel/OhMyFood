@@ -3,12 +3,13 @@
 @import "../sass/Utils/mixins";
 @import "../sass/Pages/Menu.scss";
 @import"../sass/Utils/keyframes.scss";
-
+@import"../sass/Utils/loader.scss";
 
 body {
     margin:auto;
     box-sizing: border-box;
     font-family:'roboto';
+    position:relative;
 }
 
 .centre {
@@ -84,7 +85,7 @@ h1 {
     padding:20px;
     border:none;
     border-radius: 30px;
-    background-image: linear-gradient(to bottom right, $secondary, $primary);
+    @include gradient;
     @include shadow();
     color:white;
     font-weight:500;
@@ -229,16 +230,16 @@ h1 {
                 color:transparent;     
                 -webkit-text-fill-color: transparent;
                 font-size: 28px;
-                /*margin-left:-100%;*/;
                 right:0px;
                 position:absolute;
-                /*align-self: center;*/
                 transform: scale(0);
                     }
             &:hover .restaurant--card__like--activated {
                 animation:liked 0.6s both ease;
-
                 }
+            &:hover .restaurant--card__like {
+                transform:scale(0);
+            }
             
             }
 
