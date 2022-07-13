@@ -37,9 +37,11 @@ nav {
 
 .restaurantname {
     display:flex;
+    justify-content: space-between;
     align-items:center ;
     margin: 15px 0 20px 10px;
     font-size: 56px;
+    position:relative;
 }
 
 .course {

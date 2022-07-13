@@ -220,16 +220,17 @@ h1 {
             font-size:24px;
             font-weight:100;
             align-self:center;
-            position:absolute;
-            right:25px;
             z-index: 0;
+            &--desactivated {
+                position:absolute;
+            }
             &--activated {
                 background-image:linear-gradient(to top, $secondary, $primary);
                 background-clip:text;
                 -webkit-background-clip: text;
                 color:transparent;     
                 -webkit-text-fill-color: transparent;
-                font-size: 28px;
+                font-size: 25px;
                 right:0px;
                 position:absolute;
                 transform: scale(0);
@@ -237,8 +238,9 @@ h1 {
             &:hover .restaurant--card__like--activated {
                 animation:liked 0.6s both ease;
                 }
-            &:hover .restaurant--card__like {
-                transform:scale(0);
+            &:hover .restaurant--card__like--desactivated {
+                opacity:0;
+                transition-duration: 1s;
             }
             
             }
@@ -246,6 +248,11 @@ h1 {
         &:hover {
             @include strongershadow();
         }
+        }
+
+        .like-index {
+            position:absolute;
+            right:25px;
         }
 
 

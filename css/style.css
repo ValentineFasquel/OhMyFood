@@ -34,9 +34,11 @@ nav {
 
 .restaurantname {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin: 15px 0 20px 10px;
   font-size: 56px;
+  position: relative;
 }
 
 .course--title {
@@ -189,14 +191,8 @@ nav {
   0% {
     transform: scale(0);
   }
-  90% {
-    transform: scale(1) translateX(3%);
-  }
-  95% {
-    transform: translateX(-3%);
-  }
   100% {
-    transform: translatex(0);
+    transform: scale(1);
   }
 }
 /*CHECKED ANIMATION*/
@@ -513,9 +509,10 @@ h1 {
   font-size: 24px;
   font-weight: 100;
   align-self: center;
-  position: absolute;
-  right: 25px;
   z-index: 0;
+}
+.restaurant--card__like--desactivated {
+  position: absolute;
 }
 .restaurant--card__like--activated {
   background-image: linear-gradient(to top, #ff79da, #9356DC);
@@ -523,7 +520,7 @@ h1 {
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  font-size: 28px;
+  font-size: 25px;
   right: 0px;
   position: absolute;
   transform: scale(0);
@@ -531,12 +528,18 @@ h1 {
 .restaurant--card__like:hover .restaurant--card__like--activated {
   animation: liked 0.6s both ease;
 }
-.restaurant--card__like:hover .restaurant--card__like {
-  transform: scale(0);
+.restaurant--card__like:hover .restaurant--card__like--desactivated {
+  opacity: 0;
+  transition-duration: 1s;
 }
 .restaurant--card:hover {
   box-shadow: 10px 10px 15px #aaaaaa;
   transition: box-shadow 0.5s ease;
+}
+
+.like-index {
+  position: absolute;
+  right: 25px;
 }
 
 footer {
