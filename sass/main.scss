@@ -2,18 +2,14 @@
 @import "../sass/utils/variables";
 @import "../sass/Utils/mixins";
 @import "../sass/Pages/Menu.scss";
-@import"../sass/Utils/keyframes.scss";
-@import"../sass/Utils/loader.scss";
+@import "../sass/Utils/keyframes.scss";
+@import "../sass/Utils/loader.scss";
 
 body {
     margin:auto;
     box-sizing: border-box;
     font-family:'roboto';
     position:relative;
-}
-
-.centre {
-    /*max-width:1440px;*/
 }
 
 ul {
@@ -37,10 +33,8 @@ header {
   top:0;
   left:0;
   z-index:3;
-        & img {
-        margin:18px 0 10px 0;
-        }
 }
+
 
 h1 {
     font-size:32px;
@@ -221,9 +215,6 @@ h1 {
             font-weight:100;
             align-self:center;
             z-index: 0;
-            &--desactivated {
-                position:absolute;
-            }
             &--activated {
                 background-image:linear-gradient(to top, $secondary, $primary);
                 background-clip:text;

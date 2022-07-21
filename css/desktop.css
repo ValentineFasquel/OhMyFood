@@ -10,6 +10,12 @@
     display:flex;
 }
 
+/*HEADER*/
+
+header {
+  width:100%;
+}
+
 
   .functioning {
     justify-content:flex-start;
@@ -53,11 +59,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-right: 22%;
+    height:inherit;
   }
   
   .fa-arrow-left {
-    font-size: 130%;
     color: #353535;
   }
 
